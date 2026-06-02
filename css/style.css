@@ -1,0 +1,319 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+header {
+  background-color: #1db954;
+  padding: 22px;
+  text-align: center;
+}
+
+header h2 {
+  margin: 0;
+}
+
+.area-musicas {
+  display: flex;
+  min-height: 520px;
+  height: calc(100vh - 80px);
+  max-height: 720px;
+}
+
+nav {
+  width: 25%;
+  min-width: 230px;
+  background-color: #191414;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav p {
+  margin: 0 0 12px;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  background-color: #2b2b2b;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background-color: #1db954;
+  color: #121212;
+}
+
+article {
+  width: 75%;
+  background-color: #383636;
+}
+
+footer {
+  background-color: #191414;
+  border-top: 1px solid #2b2b2b;
+  padding: 18px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  color: #b3b3b3;
+  font-size: 14px;
+}
+
+.cadastro {
+  background-color: #121212;
+  padding: 50px 22px;
+}
+
+.cadastro-conteudo {
+  width: min(100%, 960px);
+  margin: 0 auto;
+}
+
+.cadastro-titulo {
+  margin-bottom: 25px;
+}
+
+.cadastro-titulo p {
+  margin: 0 0 8px;
+  color: #1db954;
+  font-weight: bold;
+}
+
+.cadastro-titulo h2 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.formulario-cadastro {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.campo label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.campo input {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #3b3b3b;
+  border-radius: 6px;
+  background-color: #242424;
+  color: white;
+  font-size: 15px;
+}
+
+.campo input:focus {
+  outline: 2px solid #1db954;
+  border-color: #1db954;
+}
+
+.acoes-formulario {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.acoes-formulario button {
+  min-width: 120px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 999px;
+  background-color: #1db954;
+  color: #121212;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.acoes-formulario .botao-limpar {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #5a5a5a;
+}
+
+.acoes-formulario button:hover {
+  filter: brightness(1.1);
+}
+
+.pagina-musica {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #383636;
+  padding: 25px;
+}
+
+.musica {
+  width: 90%;
+  max-width: 780px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 28px;
+  background-color: #181818;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.capa-musica {
+  width: 240px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+}
+
+.info-musica {
+  width: 100%;
+  min-width: 0;
+}
+
+.tipo-musica {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #1db954;
+}
+
+.info-musica h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.artista-musica {
+  margin: 8px 0 18px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #b3b3b3;
+}
+
+.player-spotify {
+  width: 100%;
+  height: 152px;
+  border: none;
+  border-radius: 12px;
+}
+
+@media (max-width: 750px) {
+  header {
+    padding: 18px;
+  }
+
+  .area-musicas {
+    flex-direction: column;
+    height: auto;
+    max-height: none;
+  }
+
+  nav {
+    width: 100%;
+    min-width: 0;
+    padding: 14px;
+  }
+
+  nav li {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  nav p {
+    margin: 0;
+  }
+
+  article {
+    width: 100%;
+    height: 620px;
+  }
+
+  .musica {
+    flex-direction: column;
+    padding: 22px;
+  }
+
+  .capa-musica {
+    width: 220px;
+  }
+
+  .info-musica h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .tipo-musica,
+  .artista-musica {
+    text-align: center;
+  }
+
+  .cadastro {
+    padding: 38px 16px;
+  }
+
+  .formulario-cadastro {
+    grid-template-columns: 1fr;
+  }
+
+  .acoes-formulario button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 980px) {
+  .area-musicas {
+    height: 620px;
+  }
+
+  nav {
+    width: 30%;
+    min-width: 210px;
+  }
+
+  article {
+    width: 70%;
+  }
+
+  .musica {
+    width: 94%;
+    gap: 20px;
+    padding: 22px;
+  }
+
+  .capa-musica {
+    width: 200px;
+  }
+
+  .info-musica h1 {
+    font-size: 30px;
+  }
+}
