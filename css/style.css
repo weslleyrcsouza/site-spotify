@@ -139,6 +139,11 @@ footer p {
   border-color: #1db954;
 }
 
+.campo input.erro {
+  border-color: #ff5f5f;
+  outline: 2px solid rgba(255, 95, 95, 0.35);
+}
+
 .acoes-formulario {
   grid-column: 1 / -1;
   display: flex;
@@ -166,6 +171,32 @@ footer p {
 
 .acoes-formulario button:hover {
   filter: brightness(1.1);
+}
+
+.mensagem-formulario {
+  display: none;
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.mensagem-formulario.ativa {
+  display: block;
+}
+
+.mensagem-formulario.erro {
+  background-color: rgba(255, 95, 95, 0.12);
+  color: #ff9b9b;
+  border: 1px solid rgba(255, 95, 95, 0.35);
+}
+
+.mensagem-formulario.sucesso {
+  background-color: rgba(29, 185, 84, 0.12);
+  color: #1db954;
+  border: 1px solid rgba(29, 185, 84, 0.35);
 }
 
 .pagina-musica {
