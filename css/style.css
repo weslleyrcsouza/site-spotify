@@ -225,6 +225,18 @@ footer p {
   border-radius: 12px;
 }
 
+.spotify-fallback {
+  display: inline-block;
+  margin-top: 12px;
+  color: #1db954;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.spotify-fallback:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 750px) {
   header {
     padding: 18px;
